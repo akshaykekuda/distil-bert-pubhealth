@@ -24,7 +24,7 @@ def fine_tune_distil_bert(model_checkpoint, dataset_train, dataset_val):
     trainer.train()
     encoded_test_dataset = tk.tokenize_dataset(dataset_test)
     print(trainer.evaluate(encoded_test_dataset))
-    distil_bert.save_best_model(model_path = "best_model")
+    distil_bert.save_best_model(model_path = "distil-bert-finetuned-pubhealth")
 
 if __name__=="__main__":
     # Calls functions to fully train the model and to test the fine-tuned model
@@ -39,7 +39,7 @@ if __name__=="__main__":
         fine_tune_distil_bert(model_checkpoint, dataset_train, dataset_val)
 
     elif setting == "testing":
-        model_checkpoint = "best_model"
+        model_checkpoint = "distil-bert-finetuned-pubhealth-best"
         evaluate_best_model(model_checkpoint, dataset_test)
     else:
         print("Invalid Argument")
