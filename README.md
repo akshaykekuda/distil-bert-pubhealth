@@ -38,4 +38,4 @@ python distil-bert-pubhealth.py testing
 ```
 
 ### 4. Fine-tuning using only the explanation attribute
-* To finetune distil-bert using using only the explanation attribute use https://github.com/akshaykekuda/distil-bert-pubhealth/blob/f88bdc066ac825cb5b882021b906f2a5b20776b1/TokenizeDataSet.py?plain=1#L5 in https://github.com/akshaykekuda/distil-bert-pubhealth/blob/f88bdc066ac825cb5b882021b906f2a5b20776b1/TokenizeDataSet.py?plain=1#L15
+* To finetune distil-bert using using only the explanation attribute use preprocess_function in the [TokenDataSet.py](TokenizeDataSet.py)
