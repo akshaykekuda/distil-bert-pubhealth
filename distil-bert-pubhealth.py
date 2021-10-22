@@ -10,8 +10,8 @@ def evaluate_best_model(model_checkpoint, dataset_test):
     best_distil_bert = Model(model_checkpoint)
     tk = TokenizeDataSet(best_distil_bert.tokenizer)
     encoded_test_dataset = tk.tokenize_dataset(dataset_test)
-    eval = best_distil_bert.load_evaluator()
-    print(eval.evaluate(encoded_test_dataset, ignore_keys=['eval_loss']))
+    tester = best_distil_bert.load_evaluator()
+    print(tester.evaluate(encoded_test_dataset, ignore_keys=['eval_loss']))
 
 def fine_tune_distil_bert(model_checkpoint, dataset_train, dataset_val):
     #finetune distil bert model on the pubhealth dataset and save the best model

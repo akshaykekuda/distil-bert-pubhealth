@@ -52,13 +52,21 @@ class Model:
 
     def load_evaluator(self, ):
         # create a evaluator class to evaluate the fine-tuned model
-        
-        evaluator = Trainer(
-            model = self.model,
+        test_args = TrainingArguments(
+            output_dir = self.model_checkpoint,
+            do_train = False,
+            do_predict = True,
+            per_device_eval_batch_size = self.batch_size,   
+            dataloader_drop_last = False    
+        )
+
+        tester = Trainer(
+            self.model,
+            test_args,
             tokenizer = self.tokenizer,
             compute_metrics = self.compute_metrics
         )
-        return evaluator
+        return tester
     def save_best_model(self, model_path):
         # save the best model in model_path
         self.model.save_pretrained(model_path)
