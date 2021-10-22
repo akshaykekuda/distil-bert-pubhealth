@@ -6,7 +6,8 @@ class PreprocessDataSet:
         self.dataset = dataset
     
     def preprocess_data(self):
-        # remove samples with lables=-1
+        # remove samples with lables=-1 and remove columns except claim and explanation
+        # returns processed dataset
         df = pd.DataFrame(self.dataset['train'])
         df = df.drop(index = df[(df.label==-1)].index.tolist())
         dataset_train = Dataset.from_pandas(df)
