@@ -34,7 +34,7 @@ if __name__=="__main__":
     ds =  PreprocessDataSet(dataset)
     dataset_train, dataset_val, dataset_test = ds.preprocess_data()
     setting = sys.argv[1]
-    if setting == 'full-train':
+    if setting == 'fine-tune':
         model_checkpoint = "distilbert-base-uncased"
         fine_tune_distil_bert(model_checkpoint, dataset_train, dataset_val)
 
