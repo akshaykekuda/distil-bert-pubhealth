@@ -10,7 +10,7 @@ class Model:
         # Model class has been customized for this task, the hyperparameters here can be changed as needed
         self.model_checkpoint = model_checkpoint
         self.metric = load_metric('accuracy')
-        self.batch_size = 64
+        self.batch_size = 32
         self.num_labels = 4
         self.epoch_len = 10
         self.metric_name = "accuracy"                     
