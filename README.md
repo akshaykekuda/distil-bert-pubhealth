@@ -11,8 +11,8 @@ On close observation of the dataset, I found some values of labels to be -1. Sin
 
 ## Approach:
 The problem can be apporached in multiple ways as follows:
-    1. Since we have the explanation for why a claim was given a particular label, we can use a sentiment analysis based approach where the expalnation can be encoded using a transformer model followed by the FFN for classifying the explanation into 4 categories
-    2. The second approach is to use both the claims and the explanation jointly in a transformer model. In this way the model can learn veracity of the claim jointly with the help of the explanation.
+1. Since we have the explanation for why a claim was given a particular label, we can use a sentiment analysis based approach where the expalnation can be encoded using a transformer model followed by the FFN for classifying the explanation into 4 categories
+2. The second approach is to use both the claims and the explanation jointly in a transformer model. In this way the model can learn veracity of the claim jointly with the help of the explanation.
 
 I have implemented these two approaches using distil-bert transformer model from huggingface(https://huggingface.co/distilbert-base-uncased). The metric used for evaluating the performance of the model is accuracy. We might also want to look at the f1 scores for each class if we are interested in any particular labels. Both these apporaches give a test set and val set accuracy of around 75%
 
@@ -37,3 +37,5 @@ python distil-bert-pubhealth.py fine-tune
 python distil-bert-pubhealth.py testing
 ```
 
+### 4. Fine-tuning using only the explanation attribute
+* To finetune distil-bert using using only the explanation attribute use https://github.com/akshaykekuda/distil-bert-pubhealth/blob/f88bdc066ac825cb5b882021b906f2a5b20776b1/TokenizeDataSet.py?plain=1#L5 in https://github.com/akshaykekuda/distil-bert-pubhealth/blob/f88bdc066ac825cb5b882021b906f2a5b20776b1/TokenizeDataSet.py?plain=1#L15
