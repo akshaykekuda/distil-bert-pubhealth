@@ -31,7 +31,9 @@ Note: Model was trained on a single node GPU at Ohio Super Computer
 ```
 python distil-bert-pubhealth.py fine-tune
 ```
+### 3. Model Testing
 * To evaluate the performance of the model on the test dataset run:
 ```
 python distil-bert-pubhealth.py testing
 ```
+
