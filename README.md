@@ -23,8 +23,8 @@ Note: Model was trained on a single node GPU at Ohio Super Computer
 ## Usage:
 ### 1. Genral Environement Setup
 * Install recent versions of pytorch, transformers, datasets and pandas
-* Download the fine tuned model here https://drive.google.com/drive/folders/1zmwhVOjUK8jiVTmKgZ1UTpLX8sFSteBF?usp=sharing. Ensure that the pytorch_model.bin is saved as distil-bert-finetuned-pubhealth-best/pytorch_model.bin.
-* Use of GPUs is recommended for training
+* Download the fine tuned model here https://drive.google.com/drive/folders/1zmwhVOjUK8jiVTmKgZ1UTpLX8sFSteBF?usp=sharing for evaluation. Ensure that the pytorch_model.bin is saved as distil-bert-finetuned-pubhealth-best/pytorch_model.bin.
+* Use of GPUs is recommended for fine-tuning
 
 ### 2. Model Training
 * To finetune the model run:
