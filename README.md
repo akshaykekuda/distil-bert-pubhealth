@@ -21,7 +21,7 @@ Another approach that I could think of here was to use text in addition to claim
 Note: Model was trained on a single node GPU at Ohio Super Computer 
 
 ## Usage:
-### 1. Genral Environement Setup
+### 1. General Environement Setup
 * Install recent versions of pytorch, transformers, datasets and pandas
 * Download the fine tuned model here https://drive.google.com/drive/folders/1zmwhVOjUK8jiVTmKgZ1UTpLX8sFSteBF?usp=sharing for evaluation. Ensure that the pytorch_model.bin is saved as distil-bert-finetuned-pubhealth-best/pytorch_model.bin.
 * Use of GPUs is recommended for fine-tuning
